@@ -2,6 +2,7 @@ public class Lesson9 {
 
     public static void main(String[] args) {
 
+        //Create array and print first element
         int[] firstArray = new int[3];
         firstArray[0] = 55;
         firstArray[1] = 1900;
@@ -9,19 +10,20 @@ public class Lesson9 {
 
         System.out.println("First element: " + firstArray[0]);
 
-        //Shorthand
+        //Shorthand syntax of array
         int[] temperatures = {33, 34, 31, 30, 29, 28, 36};
-        System.out.println("Friday temp. is: " + temperatures[4]);
+        System.out.println("Friday temp. is: " + temperatures[4]); // Prints element with index 4
         System.out.println("Length of temp is: " + temperatures.length);
         //Last element of array
         System.out.println("Last element is: " + temperatures[temperatures.length - 1]);
 
+        ////New array example
         int[] weatherForecast = new int[7];
+//        int[] weatherForecast = {29, 31, 30};     || shorthand syntax
         weatherForecast[0] = 29;
         weatherForecast[1] = 31;
         weatherForecast[2] = 30;
         weatherForecast[3] = 30;
-//        int[] weatherForecast = {29, 31, 30};
         weatherForecast[4] = 37;
         weatherForecast[5] = 30;
         weatherForecast[6] = 19;
@@ -30,6 +32,7 @@ public class Lesson9 {
         double averageTemp = (weatherForecast[0] + weatherForecast[1] + weatherForecast[2] + weatherForecast[3] + weatherForecast[4] + weatherForecast[5] + weatherForecast[6]) /7d;
         System.out.println("Average temp is " + averageTemp);
 
+        System.out.println("----------------------");
 
         //LOOPS
 
@@ -52,10 +55,11 @@ public class Lesson9 {
         //Counts how many elements are printed
         int counter = 0;
         for (int i = 59; i < 1005; i++) {
-            System.out.println("Third task #" + counter);
+            System.out.println("Third (counter) task " + counter);
             counter++;
         }
 
+        System.out.println("---------------------");
         //Shows the time and how many times clock alarms.
         counter = 1;
         for(int currentTime = 8; currentTime < 12; currentTime++){
@@ -63,7 +67,7 @@ public class Lesson9 {
             System.out.println("This is the " + counter + " time the clock alarmed.");
             counter++;
         }
-        System.out.println("----------------");
+        System.out.println("-------------------");
 
         //////////  Arrays + Loops
 
@@ -87,7 +91,8 @@ public class Lesson9 {
         String[] students = {"Artjoms", "Laura", "Tatjana"};
 
         /// Coffee example
-        for (int i = 0; i < 100; i++) {
+        /// Every 7th coffee is for free
+        for (int i = 1; i < 100; i++) {
             if (i % 7 == 0){
                 System.out.println("This coffee is for FREE!");
             }else{
